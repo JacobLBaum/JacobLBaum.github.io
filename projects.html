@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    body {
+        margin:0;
+		font-family: "Trebuchet MS"
+	}
+
+    h1 {
+		color:#466587;
+		margin: 100px;
+		margin-bottom: 30px;
+	}
+
+	h2 {
+		color:#466587;
+		margin-left: 100px;
+	}
+
+	p {
+		color:#466587;
+		margin: 200px;
+		font-size: 20px;
+	}
+
+	a {
+	    color:#466587;
+	}
+
+	.projectBox {
+        width: 700px;
+        border: 15px solid #466587;
+        padding: 50px;
+        margin: 20px;
+        margin-left: 300px;
+        color:#466587;
+	}
+
+	.navbar {
+	    overflow: hidden;
+	    position: fixed;
+	    top: 0;
+	    width: 99%;
+	    background-color:#466587;
+	    padding:10px 10px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.navbar a {
+	    float: left;
+        display: block;
+        color: #f2f2f2;
+        padding: 5px 16px;
+        text-decoration: none;
+        font-size: 17px;
+	}
+
+	.navbar a:hover {
+        color: #c8dff7;
+	}
+
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <div>
+        <a href="https://jacoblbaum.github.io">Home</a>
+    </div>
+    <div class="navbar-links">
+        <a href="/projects.html">Projects</a>
+        <a href="/resume.html" target="_blank">Resume</a>
+        <a href="https://jacoblbaum.github.io/baking">Baking</a>
+    </div>
+</div>
+
+<h1>
+    Projects Page
+</h1>
+<h2>
+    Below see links to descriptions of some of my coding projects<br><br>
+</h2>
+
+<div class="projectBox">
+    <a href="listingWebserviceProject.html" style="text-decoration: none">
+        <strong>Listing Webservice</strong><br><br>
+        <img src="images/postmanImg.png" alt="Project Picture" width="80%" height="80%"><br>
+        Language: Java<br>
+        Description: A RESTFUL webservice using Spring boot.
+        Created simplified listing microservice to manage apartment units
+        and users and answer REST requests from a database in JSON format
+    </a>
+</div>
+
+<div class="projectBox">
+    <a href="paintProject.html" style="text-decoration: none">
+        <strong>Paint Project</strong><br><br>
+        <img src="images/paintProjectImg.png" alt="Project Picture" width="80%" height="80%"><br>
+        Language: Java<br>
+        Description: Created simplified version of Microsoft Paint application in Java.
+        Utilized JavaFX GUI and various JavaFX shapes, paints, MouseEvents, and collections
+        to achieve functional drawing application with options to choose paint color, brush size,
+        use paint bucket and erase
+    </a>
+</div>
+
+<div class="projectBox">
+    <a href="dataIsPluralProject.html" style="text-decoration: none">
+        <strong>Data Is Plural Project</strong><br><br>
+        <img src="images/dataIsPluralImg.png" alt="Project Picture" width="100%" height="100%"><br>
+        Language: Java<br>
+        Description: Created an interactive console based program that takes a data set as an input, saves the
+        data set, and allows user to search the data set through multiple queries based on title, description etc
+    </a>
+</div>
+
+</body>
+</html>
