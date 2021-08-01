@@ -17,13 +17,21 @@
 
 	h2 {
 		color:#466587;
-		margin-left: 100px;
+		margin-left: 300px;
+		margin-right: 300px;
+	}
+
+	h3 {
+		color:#466587;
+		margin-left: 300px;
+		margin-right: 300px;
 	}
 
 	p {
 		color:#466587;
-		margin: 200px;
 		font-size: 20px;
+		margin-left: 300px;
+		margin-right: 300px;
 	}
 
 	.projectBox {
@@ -78,8 +86,80 @@
     Listing Webservice
 </h1>
 <h2>
-    Here is the info about this project
+    Overview
 </h2>
+<p>
+    A RESTFUL webservice in Java using Spring boot. Created
+    simplified listing microservice to manage apartment units and users
+    and answer REST requests from a database in JSON format.
+</p>
+<h2>
+    Spring Boot
+</h2>
+<p>
+    Spring boot is a framework for creating web applications. On this project Spring
+    gave me tools to configure responses to HTTP requests. Using the Spring tags
+    @GetMapping, @PostMapping and @DeleteMapping I was able to dictate what response the webservice
+    should have for Get, Post and Delete HTTP requests. Below you can see the methods with the relevant
+    Spring headers for each of the HTTP request handlers.<br><br>
+</p>
+<h3>
+    Post Mapping
+</h3>
+<p>
+    <img src="/images/postMappingImg.PNG" alt="Image of postMapping code listings"><br>
+    This method handles Post requests to create new listings in the database by adding the JSON listing
+    to the Listing Database. After adding the Listing to the Listing Database it returns the HTTPStatus CREATED.
+</p>
+<p>
+    <img src="/images/postMappingImg2.PNG" alt="Image of postMapping code users"><br>
+    A similar method was used to handle Post requests to create new users for the User Database.
+    Because more complex information was required for users, a data transfer object (DTO) was needed as an
+    intermediary between the JSON user post and the local User objects being stored in the User Database<br><br>
+</p>
+<h3>
+    Get Mapping
+</h3>
+<p>
+    <img src="/images/getMappingImg.PNG" alt="Image of getMapping code"><br>
+    This method handles get requests to retrieve information about a Listing from the Listing Database.
+    The Listing id is passed as a parameter. The listingService handles retrieving the Listing from the
+    Listing Database and returns it in JSON format via a ResponseEntity.
+</p>
+<h3>
+    Delete Mapping
+</h3>
+<p>
+    <img src="/images/deleteMappingImg.PNG" alt="Image of deleteMapping code"><br>
+    This method handles delete requests to remove a Listing from the Listing Database.
+    The Listing id is passed as a parameter. The listingService handles deleting the Listing from the Listing
+    Database and returns a message with the id of the deleted Listing or a message saying there is no Listing
+    with the specified id.
+</p>
+<h3>
+    Listing Service
+</h3>
+<p>
+    <img src="/images/listingServiceImg.PNG" alt="Image of listingService code"><br>
+    The Listing Service handles interacting with the Listing Database which is stored as a Spring repository.
+    The Spring repository framework comes with basic create, read, update and delete (CRUD) functions.<br><br>
+    <img src="/images/listingRepositoryImg.PNG" alt="Image of listingRepository code"><br>
+    The Listing Service has basic methods for creating, retrieving, and deleting a Listing from the Listing Repository.
+    These methods invoke some of the methods that come with the Spring repository. The various @ tags are tags that
+    tell the Spring framework what certain methods and classes are to be used for.<br><br>
+    <img src="/images/listingServiceImg2.PNG" alt="Image of listingService code methods"><br>
+    A similar repository is used for storing the Users in the User Repository.
+</p>
+<h2>
+    Postman/Testing
+</h2>
+<p>
+    <img src="/images/postmanImg.PNG" alt="Image of deleteMapping code"><br>
+    To test the functionality of the Listing Webservice I used <a href="https://www.postman.com" target="_blank">Postman</a>,
+    a REST Client able to send different types of HTTP requests to interact with the REST API webservice. Through
+    the Postman extension I sent post, get and delete requests to the different paths of the webservice.
+</p>
+
 
 </body>
 </html>
