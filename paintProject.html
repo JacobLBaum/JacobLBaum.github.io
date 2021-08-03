@@ -103,60 +103,63 @@
     extended from the basic JavaFX Pane class. The top portion of the screen is a custom ToolsBar object which is
     extended from the JavaFX HBox class. Within the ToolsBar there is another custom ColorPalette object which is
     extended from the JavaFX GridPane class.<br><br>
-    <img src="images/GUIImg.PNG" alt="Image of GUI structure"><br>
-</p>
-<h3>
-    Post Mapping
-</h3>
-<p>
-    <img src="/images/postMappingImg.PNG" alt="Image of postMapping code listings"><br>
-    This method handles Post requests to create new listings in the database by adding the JSON listing
-    to the Listing Database. After adding the Listing to the Listing Database it returns the HTTPStatus CREATED.
-</p>
-<p>
-    <img src="/images/postMappingImg2.PNG" alt="Image of postMapping code users"><br>
-    A similar method was used to handle Post requests to create new users for the User Database.
-    Because more complex information was required for users, a data transfer object (DTO) was needed as an
-    intermediary between the JSON user post and the local User objects being stored in the User Database<br><br>
-</p>
-<h3>
-    Get Mapping
-</h3>
-<p>
-    <img src="/images/getMappingImg.PNG" alt="Image of getMapping code"><br>
-    This method handles get requests to retrieve information about a Listing from the Listing Database.
-    The Listing id is passed as a parameter. The listingService handles retrieving the Listing from the
-    Listing Database and returns it in JSON format via a ResponseEntity.<br><br>
-</p>
-<h3>
-    Delete Mapping
-</h3>
-<p>
-    <img src="/images/deleteMappingImg.PNG" alt="Image of deleteMapping code"><br>
-    This method handles delete requests to remove a Listing from the Listing Database.
-    The Listing id is passed as a parameter. The listingService handles deleting the Listing from the Listing
-    Database and returns a message with the id of the deleted Listing or a message saying there is no Listing
-    with the specified id.<br><br><br>
+    <img src="images/GUIImg.PNG" alt="Image of GUI structure"><br><br><br>
 </p>
 <h2>
-    Listing Service
+    Application
 </h2>
 <p>
-    <img src="/images/listingServiceImg.PNG" alt="Image of listingService code"><br>
-    The Listing Service handles interacting with the Listing Database which is stored as a Spring repository.
-    The Spring repository framework comes with basic create, read, update and delete (CRUD) functions.<br><br>
-    <img src="/images/listingRepositoryImg.PNG" alt="Image of listingRepository code"><br>
-    The Listing Service has basic methods for creating, retrieving, and deleting a Listing from the Listing Repository.
-    These methods invoke some of the methods that come with the Spring repository. The various @ tags are tags that
-    tell the Spring framework what certain methods and classes are to be used for.<br><br>
-    <img src="/images/listingServiceImg2.PNG" alt="Image of listingService code methods"><br>
-    A similar repository is used for storing the Users in the User Repository.<br><br><br>
+    <img src="images/paintApplicationImg.PNG" alt="Image of Main application code"><br><br>
+    The stage is set by first creating a borderpane and setting the center to a Canvas object and the
+    top to a ToolsBar object. Then a JavaFX Scene object is created with the borderpane and the dimensions
+    of the scene. Finally the scene is set in the primaryStage which adds all the elements of the application
+    to the GUI to be displayed to the user.<br><br><br>
+</p>
+<h2>
+    Custom Objects
+</h2>
+<h3>
+    Tools Bar
+</h3>
+<p>
+    <img src="images/toolsBarImg.PNG" alt="Image of toolsBar" width="90%" height="90%"><br><br>
+    The ToolsBar extends the JavaFX HBox. The HBox is a pane that displays its children in a single
+    horizontal row. The ToolsBar arranges the elements in the order they are added in the
+    getChildren().addAll() method.<br><br>
+    The first element is the clear button which clears all the children from the canvas essentially
+    wiping clean the canvas.<br><br>
+    The next two elements are the text field box and its label for controlling the pen size,
+    defaulted to 8.<br><br>
+    The final element of the ToolsBar is the custom ColorPalette object which displays 8 different
+    colors to choose from as the color for the pen.<br><br>
+    <img src="images/toolsBarCodeImg.PNG" alt="Image of toolsBar code"><br><br>
+</p>
+<h3>
+    Color Palette
+</h3>
+<p>
+    <img src="images/colorPaletteImg.PNG" alt="Image of colorPalette" width="50%" height="50%"><br>
+    The ColorPalette extends the JavaFX GridPane. The GridPane is a pane that displays its children
+    in a flexible grid of rows and columns. The various colors are displayed as rectangle objects with
+    different colors. These rectangles are added to the ColorPalette and displayed for the user to
+    choose from. When the user clicks on a colored rectangle the color of the rectangle is checked
+    and that color is set as the current pen color.<br><br>
+    <img src="images/colorPaletteCodeImg.PNG" alt="Image of colorPalette code"><br><br>
+</p>
+<h3>
+    Canvas
+</h3>
+<p>
+    The Canvas is where the actual "painting" takes place. The Canvas is extended from the basic JavaFX
+    pane class as this class is the most flexible in terms of placing objects anywhere on the pane.<br><br>
+    <img src="images/canvasPaintMethodsImg.PNG" alt="Image of canvas paint methods code"><br><br>
+
 </p>
 <h2>
     Postman/Testing
 </h2>
 <p>
-    <img src="/images/postmanImg.PNG" alt="Image of deleteMapping code"><br>
+    <img src="images/postmanImg.PNG" alt="Image of deleteMapping code"><br>
     To test the functionality of the Listing Webservice I used <a href="https://www.postman.com" target="_blank">Postman</a>,
     a REST Client able to send different types of HTTP requests to interact with the REST API webservice. Through
     the Postman extension I sent post, get and delete requests to the different paths of the webservice.
