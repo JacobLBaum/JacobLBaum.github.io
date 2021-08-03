@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Listing Webservice</title>
     <style>
     body {
         margin:0;
@@ -91,7 +91,7 @@
 <p>
     A RESTFUL webservice in Java using Spring boot. Created
     simplified listing microservice to manage apartment units and users
-    and answer REST requests from a database in JSON format.
+    and answer REST requests from a database in JSON format.<br><br><br>
 </p>
 <h2>
     Spring Boot
@@ -124,7 +124,7 @@
     <img src="/images/getMappingImg.PNG" alt="Image of getMapping code"><br>
     This method handles get requests to retrieve information about a Listing from the Listing Database.
     The Listing id is passed as a parameter. The listingService handles retrieving the Listing from the
-    Listing Database and returns it in JSON format via a ResponseEntity.
+    Listing Database and returns it in JSON format via a ResponseEntity.<br><br>
 </p>
 <h3>
     Delete Mapping
@@ -134,11 +134,11 @@
     This method handles delete requests to remove a Listing from the Listing Database.
     The Listing id is passed as a parameter. The listingService handles deleting the Listing from the Listing
     Database and returns a message with the id of the deleted Listing or a message saying there is no Listing
-    with the specified id.
+    with the specified id.<br><br><br>
 </p>
-<h3>
+<h2>
     Listing Service
-</h3>
+</h2>
 <p>
     <img src="/images/listingServiceImg.PNG" alt="Image of listingService code"><br>
     The Listing Service handles interacting with the Listing Database which is stored as a Spring repository.
@@ -148,7 +148,7 @@
     These methods invoke some of the methods that come with the Spring repository. The various @ tags are tags that
     tell the Spring framework what certain methods and classes are to be used for.<br><br>
     <img src="/images/listingServiceImg2.PNG" alt="Image of listingService code methods"><br>
-    A similar repository is used for storing the Users in the User Repository.
+    A similar repository is used for storing the Users in the User Repository.<br><br><br>
 </p>
 <h2>
     Postman/Testing
