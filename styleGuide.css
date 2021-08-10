@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Baking</title>
-    <link rel="icon" type="image/png" href="images/Logo.png"/>
-    <style>
     body {
         margin:0;
 		font-family: "Trebuchet MS"
@@ -67,25 +60,3 @@
 	.navbar a:hover {
         color: #c8dff7;
 	}
-
-</style>
-</head>
-<body>
-
-<div class="navbar">
-    <div>
-        <a href="https://jacoblbaum.github.io">Home</a>
-    </div>
-    <div class="navbar-links">
-        <a href="/projects.html">Projects</a>
-        <a href="/resume.html" target="_blank">Resume</a>
-        <a href="https://jacoblbaum.github.io/baking">Baking</a>
-    </div>
-</div>
-
-<h1>
-    Sorry this page is not set up yet. Come back soon to see my baking creations.
-</h1>
-
-</body>
-</html>

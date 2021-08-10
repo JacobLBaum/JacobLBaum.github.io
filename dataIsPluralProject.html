@@ -3,71 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Data Is Plural - Project</title>
-    <style>
-    body {
-        margin:0;
-		font-family: "Trebuchet MS"
-	}
-
-    h1 {
-		color:#466587;
-		margin: 100px;
-		margin-bottom: 30px;
-	}
-
-	h2 {
-		color:#466587;
-		margin-left: 300px;
-		margin-right: 300px;
-	}
-
-	h3 {
-		color:#466587;
-		margin-left: 300px;
-		margin-right: 300px;
-	}
-
-	p {
-		color:#466587;
-		font-size: 20px;
-		margin-left: 300px;
-		margin-right: 300px;
-	}
-
-	.projectBox {
-        width: 500px;
-        border: 15px solid #466587;
-        padding: 50px;
-        margin: 20px;
-        margin-left: 300px;
-	}
-
-	.navbar {
-	    overflow: hidden;
-	    position: fixed;
-	    top: 0;
-	    width: 99%;
-	    background-color:#466587;
-	    padding:10px 10px;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-	}
-
-	.navbar a {
-	    float: left;
-        display: block;
-        color: #f2f2f2;
-        padding: 5px 16px;
-        text-decoration: none;
-        font-size: 17px;
-	}
-
-	.navbar a:hover {
-        color: #c8dff7;
-	}
-
-</style>
+    <link rel="icon" type="image/png" href="images/Logo.png"/>
+    <link rel="stylesheet" type="text/css" href="styleGuide.css">
 </head>
 <body>
 
@@ -109,10 +46,10 @@
     The data sets are saved as a CSV file and at the start of the program the CSV file is parsed. The CSV file contains
     summary information about each of the contained data sets including the headline, text describing the data set and links
     to the referenced data sets. These attributes (title, description, url) serve as the source for queries made by the user.<br><br>
-    <img src="images/DataSetExcelImg.PNG" alt="Image of master data set"><br><br>
+    <img src="images/dataSetExcelImg.PNG" alt="Image of master data set"><br><br>
     The CSV file is opened and parsed into a DataSetList object called listOfAllDataSets. This dataSetList object is then
     used as the source of all user's queries of the data sets.<br><br>
-    <img src="images/ParseDataSetsImg.PNG" alt="Image of parsing data code"><br><br>
+    <img src="images/parseDataSetsImg.PNG" alt="Image of parsing data code"><br><br>
 </p>
 <h3>
     User Interaction
