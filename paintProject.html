@@ -35,7 +35,7 @@
 </h2>
 <p>
     The GUI is constructed from a base of a JavaFX BorderPane object. BorderPanes allow one to set the
-    different sections (Top, Bottom, Left, Right, Center) of the pane with different objects. On this BorderPane
+    different sections (Top, Bottom, Left, Right, Center) of the pane with different objects. On this BorderPane there
     are two custom JavaFX objects. The center painting area of the screen is a custom Canvas object which is
     extended from the basic JavaFX Pane class. The top portion of the screen is a custom ToolsBar object which is
     extended from the JavaFX HBox class. Within the ToolsBar there is another custom ColorPalette object which is
@@ -56,10 +56,10 @@
     application to the GUI to be displayed to the user.<br><br>
     <img src="images/paintApplicationImg.PNG" alt="Image of Main application code"><br><br>
     The Main class also has the logic for the mouseEvents which control the program. When the Canvas is
-    left clicked circles are painted with the current pen size and color. When the Canvas is right clicked
-    the erase function is called creating circles the color of the background. When the Canvas is clicked
-    with the middle mouse button, the "Paint Bucket" tool is called and all circles of the same color that
-    are adjacent to the one clicked will be changed to the current pen color. The Canvas also responds to
+    left clicked, circles are painted where the cursor is with the current pen size and color. When the Canvas
+    is right clicked, the erase function is called creating circles the color of the background. When the Canvas
+    is clicked with the middle mouse button, the "Paint Bucket" tool is called and all circles of the same color
+    that are adjacent to the one clicked will be changed to the current pen color. The Canvas also responds to
     mouse drags with the left and right mouse button the same as it does for clicks. When the ToolsBar is
     clicked, the program attempts to identify which color the user clicked on from the ColorPalette. If the
     user clicks on either one of the other buttons or text fields in the ToolsBar or anywhere not on the

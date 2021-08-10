@@ -28,14 +28,14 @@
 <p>
     A RESTFUL webservice in Java using Spring boot. Created
     simplified listing microservice to manage apartment units and users
-    and answer REST requests from a database in JSON format.<br><br><br>
+    and answer HTTP requests from a database in JSON format.<br><br><br>
 </p>
 <h2>
     Spring Boot
 </h2>
 <p>
-    Spring boot is a framework for creating web applications. On this project Spring
-    gave me tools to configure responses to HTTP requests. Using the Spring tags
+    Spring boot is a framework for creating web applications. For this project Spring
+    provided tools to configure responses to HTTP requests. Using the Spring tags
     @GetMapping, @PostMapping and @DeleteMapping I was able to dictate what response the webservice
     should have for Get, Post and Delete HTTP requests. Below you can see the methods with the relevant
     Spring headers for each of the HTTP request handlers.<br><br>
@@ -50,8 +50,8 @@
 </p>
 <p>
     <img src="/images/postMappingImg2.PNG" alt="Image of postMapping code users"><br>
-    A similar method was used to handle Post requests to create new users for the User Database.
-    Because more complex information was required for users, a data transfer object (DTO) was needed as an
+    A similar method is used to handle Post requests to create new users for the User Database.
+    Because more complex information is required for users, a data transfer object (DTO) is needed as an
     intermediary between the JSON user post and the local User objects being stored in the User Database<br><br>
 </p>
 <h3>

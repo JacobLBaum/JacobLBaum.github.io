@@ -29,9 +29,9 @@
     This project is a console based data querying program that is based on a public data collection project
     called <a href="https://www.data-is-plural.com/" target="_blank">Data Is Plural</a>. Data Is Plural is a weekly newsletter
     of "curious and useful" datasets published by <a href="https://www.jsvine.com/" target="_blank">Jeremy Singer-Vine</a> since
-    October 21, 2015. The program interacts with a master data set which contains summary information and links to the
-    many "curious and useful" that have been published as part of the Data Is Plural newsletter. At the start of the
-    program the master data set is parsed and saved as a custom DataSetList object which contains each of the data sets
+    October 21, 2015. The program interacts with a main data set which contains summary information and links to the
+    many "curious and useful" data sets that have been published as part of the Data Is Plural newsletter. At the start of the
+    program the main data set is parsed and saved as a custom DataSetList object which contains each of the data sets
     stored as custom DataSet objects. The user is then told how to interact with the program via queries and the program
     parses and responds to any valid queries the user provides. The program is terminated when the user types quit into
     the console.<br><br><br>
@@ -83,7 +83,7 @@
     sets that contain links to governmental websites. We can narrow the search by adding a url query to our previous query.
     Here are the results for the two queries, "title food url .gov".<br><br>
     <img src="images/interactiveConsoleImg2.PNG" alt="Image of title food url .gov query"><br><br>
-    Again the results results are truncated for simplicity. If the type of query does not match any of the three allowed
+    Again the results are truncated for simplicity. If the type of query does not match any of the three allowed
     query types then the program will print an error message and allow the user to try again.<br><br>
     <img src="images/badQueryImg.PNG" alt="Image of bad query"><br><br>
     If more than two queries are given, again an error message is printed and the user may re-enter a query.
@@ -116,7 +116,7 @@
     has three query functions, one for each of the allowed types of queries. These functions are getByTitle, getByDescription,
     and getByURL. Each of these functions first checks if the keyword is valid and throws an IllegalArgumentException if
     it is not. Then it checks all DataSet objects stored in the DataSetList and adds any DataSets that contain the keyword
-    in the specified query field and adds them to a new DataSetList object. Finally this new DataSetList with all the DataSets
+    in the specified query field to a new DataSetList object. Finally this new DataSetList with all the DataSets
     that match the query is returned.<br><br>
     <img src="images/dataSetListImg.PNG" alt="Image of DataSetList class"><br><br>
 </p>
@@ -124,7 +124,7 @@
     Date
 </h3>
 <p>
-    The Date class is a class that simply represents a year month and day date. This class is used to validate that a date
+    The Date class is a class that simply represents a year, month and day date. This class is used to validate that a date
     provided for a given data set is a valid date and allows DataSet objects to be compared by their chronological dates.
     The Date class constructor takes a year, month and day as its parameters and checks whether they represent a valid date.<br><br>
     <img src="images/dateImg.PNG" alt="Image of Date class"><br><br>
