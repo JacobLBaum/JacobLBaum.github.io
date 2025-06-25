@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hark-AI - Project</title>
+    <link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+    <link rel="stylesheet" type="text/css" href="styleGuide.css">
+</head>
+<body>
+
+<div class="navbar">
+    <div>
+        <a href="/">Home</a>
+    </div>
+    <div class="navbar-links">
+        <a href="/projects.html">Projects</a>
+        <a href="/resume.html" target="_blank">Resume</a>
+    </div>
+</div>
+
+<h1>
+    Hark-AI
+</h1>
+
+<div>
+    <span style="display: block; text-align: center;">
+        <a href="https://hark-ai.pages.dev/" target="blank">
+            <img src="images/hark-ai-homepage.png" alt="Image of hark homepage" width="50%" height="50%"><br><br><br>
+        </a>
+    </span>
+
+</div>
+<h2>
+    Overview
+</h2>
+<p>
+    Hark-AI is an AI podcast service that creates daily podcasts with up to date news. The app uses Perplexity's completions 
+    API to generate updated podcast scripts which are then used to generate a podcast using ElevenLabs text to speech 
+    API. The app is hosted on Cloudflare here. Uses Cloudflare's built database service R2 and scheduled workers to 
+    populate the DB daily with podcasts.<br><br><br>
+</p>
+<h2>
+    Infrastructure
+</h2>
+<p>
+    The infrastructure utilizes Cloudflare's built in solutions for ease of getting off the ground as I chose Cloudflare
+    for my host. I have experience with AWS infrastructure so I will compare the offerings to the corresponding AWS offerings.
+    Cloudlfare offers an S3 like storage called R2 which is where podcast scripts and audio files are stored. Cloudflare also 
+    offers lambda function like scheduled workers called simply Cloudflare Workers. I have a worker setup to populate the R2 
+    database daily with a new podcast capturing that days news.<br><br>
+    <img src="images/hark-ai-architecture.png" alt="Image of hark architecture" width="80%" height="80%"><br><br><br>
+</p>
+<h2>
+    Further Work/Vision
+</h2>
+<p>
+    I will continue developing Hark-AI and eventually it will offer completely personalized podcasts sourcing information from 
+    sources specified by the user, so they can have exactly the right podcast for what their moment demands. Examples could include 
+    a 25 minute podcast on politics and world news for my morning commute, a 10 minute podcast about Manhattan for my bathroom break 
+    and a 15 minute podcast on movie and tv-show news for when I get home, sourcing the information from my favorite celebrity gossip 
+    news sources.
+    <br><br>
+    I will also likely move from Cloudflare to AWS as AWS has more services, however in the current simple state Cloudlfare provides 
+    good service at a great price.
+</p>
+</body>
+</html>
